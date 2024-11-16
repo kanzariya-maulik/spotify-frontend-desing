@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let a=[7,1,5,3,6,4];
+    let profit=0;
+    let maxprofit=0;
+    let buyPrice;
+    buyPrice=a[0];
+    for(let i=1;i<a.length+1;i++){
+        let sellPrice=a[i];
+        if(buyPrice < sellPrice ){
+            profit=sellPrice-buyPrice;
+            if(profit>maxprofit){
+            maxprofit=profit;
+            }
+        }else{
+            buyPrice=sellPrice;
+        }
+    }
+    console.log(profit)
+    </script>
+<body>
+</body>
+</html>
